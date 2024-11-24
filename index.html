@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sanjivram's Music Player</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Sanjivram's Music Player</h1>
+      <input
+        type="text"
+        id="searchBar"
+        placeholder="Search tracks..."
+        oninput="filterTracks()"
+      />
+      <button onclick="importFolder()">Import Folder</button>
+    </header>
+
+    <div class="playlist" id="playlist"></div>
+
+    <footer class="player-controls">
+      <div class="now-playing">
+        <div class="track-info">
+          <h2 id="trackTitle">No Track Selected</h2>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button onclick="previousTrack()">⏮</button>
+        <button id="playPause" onclick="togglePlayPause()">▶️</button>
+        <button onclick="nextTrack()">⏭</button>
+        <button id="loopToggle" onclick="toggleLoop()">🔁</button>
+      </div>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
